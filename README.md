@@ -30,10 +30,12 @@ Tortoise_assignment
 
 ## Note
 
-Download Demo apk from [here](https://drive.google.com/file/d/103Ix62RjJ7vKaHHzyLi2_sICSjA0gxBC/view?usp=sharing).
+Download Demo apk from [here](https://drive.google.com/file/d/1Ql8CaI5Pj_Z0lzeeh3xCE4NkOlFV-cPI/view?usp=sharing).
 
-<!-- 
+View video demo of IPhone 15 simulator [here](https://drive.google.com/file/d/1RM0Lm1evub1Zdb-9VWJJ_A0fUyUh4TaT/view?usp=sharing).
+
+
 
 
 ![Thumbnail](https://github.com/Alabhya268/assignment_Tortoise/blob/laptop/demo/shipsy_thumbnail.png?raw=true)
- -->
+

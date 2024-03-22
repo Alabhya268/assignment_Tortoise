@@ -72,10 +72,11 @@ class _FillModelBarState extends State<FillModelBar> {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           Text(
-                            "Setting allowance amount",
+                            "Setting allowance amount".toUpperCase(),
                             style: context.constantUi.textStlHaffer(
                               fontSize: context.constantUi.textSizeSmallOne,
                               fontWeight: context.constantUi.fontWeightBold,
+                              color: const Color(0xffCBCBCB),
                             ),
                           ),
                           _midSection(context),
@@ -129,6 +130,7 @@ class _FillModelBarState extends State<FillModelBar> {
 
   CustomButton _bottomButton(BuildContext context) {
     return CustomButton(
+      onTap: () => Navigator.pop(context),
       child: Center(
         child: Text(
           "Done",
@@ -173,19 +175,20 @@ class _FillModelBarState extends State<FillModelBar> {
               curAmt.value = amt.round();
             },
           ),
+          const SizedBox(height: 10),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
                 "₹ 0",
                 style: context.constantUi.textStlInter(
-                  fontSize: context.constantUi.textSizeSmallOne,
+                  fontSize: context.constantUi.textSizeSmallOne + 1,
                 ),
               ),
               Text(
                 "₹ $maxAmt",
                 style: context.constantUi.textStlInter(
-                  fontSize: context.constantUi.textSizeSmallOne,
+                  fontSize: context.constantUi.textSizeSmallOne + 1,
                 ),
               ),
             ],

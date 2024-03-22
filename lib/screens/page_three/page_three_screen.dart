@@ -62,7 +62,7 @@ class _PageThreeScreenState extends State<PageThreeScreen> {
         ),
       ),
       body: ListView(
-        padding: const EdgeInsets.all(20),
+        padding: const EdgeInsets.all(25),
         children: [
           FullAllowanceSection(cardData: cardData),
           _benefitSection(context),
@@ -79,17 +79,18 @@ class _PageThreeScreenState extends State<PageThreeScreen> {
   Column _faqSection(BuildContext context) {
     return Column(
       children: [
-        const SizedBox(height: 15),
+        const SizedBox(height: 20),
         _customTitle(context,
             svg: context.svgPath.faq, text: "Frequently asked questions"),
         FaqWidget(faq: faq),
+        const SizedBox(height: 20),
       ],
     );
   }
 
   Container _howItWorkSection(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(vertical: 15),
+      padding: const EdgeInsets.symmetric(vertical: 20),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -156,7 +157,7 @@ class _PageThreeScreenState extends State<PageThreeScreen> {
 
   Container _benefitSection(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(vertical: 15),
+      padding: const EdgeInsets.symmetric(vertical: 20),
       child: Column(
         children: [
           _customTitle(context, svg: context.svgPath.benefit, text: "Benefits"),

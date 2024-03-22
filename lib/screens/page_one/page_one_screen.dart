@@ -2,6 +2,7 @@ import 'package:assignment/screens/page_two/page_two_screen.dart';
 import 'package:assignment/utils/app_extensions.dart';
 import 'package:assignment/widget/custom_button.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -11,60 +12,63 @@ class PageOneScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        elevation: 0,
-      ),
       body: Container(
-        padding: const EdgeInsets.all(20),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        padding: const EdgeInsets.symmetric(vertical: 0),
+        child: ListView(
           children: [
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                SvgPicture.asset(
-                  height: 32,
-                  width: 32,
-                  context.svgPath.creditCard,
-                ),
-                Text(
-                  "Flexi-benefits card",
-                  textAlign: TextAlign.center,
-                  style: context.constantUi.textStlHaffer(
-                    fontSize: context.constantUi.textSizeLargeTwo,
-                    fontWeight: context.constantUi.fontWeightBold,
-                    color: context.constantUi.colorBlackButton,
-                  ),
-                ),
-              ],
-            ),
-            RichText(
-              textAlign: TextAlign.center,
-              text: TextSpan(
+            const SizedBox(height: 50),
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  TextSpan(
-                    style: context.constantUi.textStlInter(),
-                    text:
-                        "Allocate a part of your salary against tax-saving allowances and access them with a Rupay card that is ",
+                  SvgPicture.asset(
+                    height: 32,
+                    width: 32,
+                    context.svgPath.creditCard,
                   ),
-                  TextSpan(
-                    style: context.constantUi.textStlInter(
+                  const SizedBox(height: 10),
+                  Text(
+                    "Flexi-benefits card",
+                    textAlign: TextAlign.center,
+                    style: context.constantUi.textStlHaffer(
+                      fontSize: context.constantUi.textSizeLargeTwo,
                       fontWeight: context.constantUi.fontWeightBold,
                       color: context.constantUi.colorBlackButton,
                     ),
-                    text: "accepted online ",
                   ),
-                  TextSpan(
-                    style: context.constantUi.textStlInter(),
-                    text: "and ",
-                  ),
-                  TextSpan(
-                    style: context.constantUi.textStlInter(
-                      fontWeight: context.constantUi.fontWeightBold,
-                      color: context.constantUi.colorBlackButton,
+                  const SizedBox(height: 10),
+                  RichText(
+                    textAlign: TextAlign.center,
+                    text: TextSpan(
+                      children: [
+                        TextSpan(
+                          style: context.constantUi.textStlInter(),
+                          text:
+                              "Allocate a part of your salary against tax-saving allowances and access them with a Rupay card that is ",
+                        ),
+                        TextSpan(
+                          style: context.constantUi.textStlInter(
+                            fontWeight: context.constantUi.fontWeightBold,
+                            color: context.constantUi.colorBlackButton,
+                          ),
+                          text: "accepted online ",
+                        ),
+                        TextSpan(
+                          style: context.constantUi.textStlInter(),
+                          text: "and ",
+                        ),
+                        TextSpan(
+                          style: context.constantUi.textStlInter(
+                            fontWeight: context.constantUi.fontWeightBold,
+                            color: context.constantUi.colorBlackButton,
+                          ),
+                          text: "across 5 lakh merchants",
+                        ),
+                      ],
                     ),
-                    text: "across 5 lakh merchants",
                   ),
+                  const SizedBox(height: 20),
                 ],
               ),
             ),
@@ -72,8 +76,10 @@ class PageOneScreen extends StatelessWidget {
               context.imgPath.cardOne,
               width: double.maxFinite,
             ),
-            SizedBox(
+            const SizedBox(height: 35),
+            Container(
               height: 132,
+              padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
